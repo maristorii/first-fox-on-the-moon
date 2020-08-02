@@ -107,6 +107,10 @@ html {
   background-image: url(img/home_128.png);
   --aspect-ratio: calc(128 / 95);
 }
+.links__item_type_horse {
+  background-image: url(img/horse_80.png);
+  --aspect-ratio: calc(88 / 80);
+}
 .links__item_type_lang {
   --aspect-ratio: calc(1020 / 460);
 }
