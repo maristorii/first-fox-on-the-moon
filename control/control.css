@@ -1,0 +1,123 @@
+.control__arrow::before {
+  display: block;
+  content: '';
+  position: relative;
+  top: 71%;
+  left: 37%;
+  width: 27.333%;
+  height: 61.84%;
+  transition: transform 1s;
+  transform: rotate(250deg);
+  background-image: url('img/arrow.png');
+  background-size: 50%;
+  background-position: left 59.5% top 30.5%;
+  background-repeat: no-repeat;
+}
+
+.control_phase_closed .control__arrow::before,
+.control_phase_on-start .control__arrow::before {
+  transform: rotate(250deg);
+}
+
+.control_phase_launch .control__arrow::before,
+.control_phase_around-earth .control__arrow::before {
+  transform: rotate(287deg);
+}
+
+.control_phase_way-to-moon .control__arrow::before {
+  transform: rotate(325deg);
+}
+
+.control_phase_around-moon .control__arrow::before {
+  transform: rotate(362deg);
+}
+
+.control_phase_landing .control__arrow::before,
+.control_phase_complete .control__arrow::before {
+    transform: rotate(400deg);
+}
+
+.control__arrow {
+  width: 100%;
+  height: 50.5%;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  top: 6.5%;
+  left: 16.5%;
+}
+
+.control__message {
+  position: absolute;
+  top: 61.5%;
+  left: 51%;
+  width: 32%;
+  height: 4.947%;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: top 0 left 0;
+}
+
+.body_lang_ru .control__message {
+  background-image: url('img/message_text-ru.png');
+}
+
+.body_lang_tat .control__message {
+  background-image: url('img/message_text-tat.png');
+}
+
+.control_message_success .control__message {
+  background-position: top 25% left 0;
+}
+
+.control_message_late .control__message {
+  background-position: top 50% left 0;
+}
+
+.control_message_early .control__message {
+  background-position: top 75% left 0;
+}
+
+.control_phase_complete .control__message {
+  background-position: top 100% left 0;
+}
+
+.control__button {
+  --pressed-delay: 0%;
+  --ready-delay: 0%;
+  position: absolute;
+  top: 70%;
+  left: 49%;
+  width: 36.667%;
+  height: 18.55%;
+  background: none;
+  border: none;
+  pointer-events: none;
+  background-image: url('img/buttons.png');
+  background-size: 100% auto;
+  background-position: top calc(var(--pressed-delay) + var(--ready-delay)) left 0;
+  background-repeat: no-repeat;
+  padding: 0 1.5% 3.5% 0;
+}
+
+.book__page_current .control__button {
+  pointer-events: all;
+}
+
+.control_button-pressed .control__button {
+  --pressed-delay: 33.333%;
+}
+
+.control_button-ready .control__button {
+  --ready-delay: 66.667%;
+}
+
+.control_message_late .control__button,
+.control_message_early .control__button {
+  --ready-delay: 0%;
+}
+
+.control_message_success .control__button {
+  --ready-delay: 66.667%;
+}

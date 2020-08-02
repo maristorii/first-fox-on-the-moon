@@ -1,0 +1,20 @@
+<svg height="690" viewBox="0 0 640 690" width="640" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text {
+      font: 20px arial;
+      fill: #fff9cd;
+    }
+  </style>
+
+  <text>
+    <tspan x="40" y="70">Төлке үз проектына зур җаваплылык белән тотынды.</tspan>
+    <tspan x="40" dy="25">Ул бурычлар исемлеген төзеде инде һәм аны күренеп</tspan>
+    <tspan x="40" dy="25">торган урынга элеп куйды:</tspan>
+
+    <tspan x="40" dy="38">1. Айга маршрут төзергә.</tspan>
+    <tspan x="40" dy="25">2. Ракетаны очышка әзерләргә.</tspan>
+    <tspan x="40" dy="25">3. Юлга әйберләрне җыерга.</tspan>
+    <tspan x="40" dy="25">4. Айга очырга.</tspan>
+    <tspan x="40" dy="25">5. Сәяхәт турында нәтиҗәләр ясарга.</tspan>
+  </text>
+</svg>

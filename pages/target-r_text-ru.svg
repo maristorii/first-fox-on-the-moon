@@ -1,0 +1,14 @@
+<svg height="690" viewBox="0 0 640 690" width="640" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text {
+      font: 20px arial;
+      fill: black;
+    }
+  </style>
+
+  <text>
+    <tspan x="50" y="50">Лис хочет совершить полёт на Луну.</tspan>
+    <tspan x="50" dy="25">Медведь задался целью построить домик к осени.</tspan>
+    <tspan x="50" dy="25">Кот будет снимать фильм по своему сценарию.</tspan>
+  </text>
+</svg>

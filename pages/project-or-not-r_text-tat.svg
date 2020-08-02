@@ -1,0 +1,16 @@
+<svg height="690" viewBox="0 0 640 690" width="640" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text {
+      font: 20px arial;
+      fill: black;
+    }
+  </style>
+
+  <text>
+    <tspan x="20" y="570">Бу әлбәттә дөрес. Тик Песинең кебек шундый ук фильм бармы</tspan>
+    <tspan x="20" dy="25">соң тагын? Яки Аюның балкортларының кебек йортлары? Юк.</tspan>
+    <tspan x="20" dy="25">Һәм Төлкенең Айга очуы кебек, әле беркем дә <tspan style="font-weight: bold;">алай</tspan> очмаган:</tspan>
+    <tspan x="20" dy="25">хәзер замана да бүтән, шартлар да бөтенләй башка.</tspan>
+    <tspan x="20" dy="25">Проектның уникальлеге шуннан гыйбарәт тә.</tspan>
+  </text>
+</svg>

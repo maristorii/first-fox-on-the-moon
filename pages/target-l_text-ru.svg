@@ -1,0 +1,16 @@
+<svg height="690" viewBox="0 0 640 690" width="640" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text {
+      font: 20px arial;
+      fill: black;
+    }
+  </style>
+
+  <text>
+    <tspan x="50" y="50">У любого, даже самого маленького проекта есть</tspan>
+    <tspan x="50" dy="25">цель. Это как конечная точка на карте: какой бы</tspan>
+    <tspan x="50" dy="25">путь ни был выбран, самая главная цель – одна.</tspan>
+    <tspan x="50" dy="25">Давай-ка вспомним, какие цели стоят перед</tspan>
+    <tspan x="50" dy="25">Лисом, Медведем и Котом?</tspan>
+  </text>
+</svg>

@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Первый лис на луне</title>
+
+  <link rel="stylesheet" href="src/lib/book/book.css" />
+  <script type="text/javascript" src="src/lib/book/Book.js"></script>
+
+  <link rel="stylesheet" href="src/maristoriiBook.css" />
+  <script type="text/javascript" src="src/maristoriiBook.js" defer></script>
+
+  <link rel="stylesheet" href="control/control.css" />
+  <script type="text/javascript" src="control/Control.js"></script>
+
+  <!-- <link rel="stylesheet" href="building/building.css" />
+  <script type="text/javascript" src="building/Building.js"></script> -->
+</head>
+<body class="body" id="body">
+  <div class="content" id="content">
+    <div class="content__hint">
+      <video class="content__hint-video" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline">
+        <source data-src="img/hint_640_text.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="book content__book" id="book">
+      <!-------------------------------------------------->
+      <div class="book__page">
+        <div class="loading"></div>
+        <video class="book__img" loop="loop" muted="muted" playsinline="playsinline" preload="none">
+          <source src="pages/cover-front_640.mp4" type="video/mp4" />
+        </video>
+        <img data-src="pages/cover-front_640_text.png" class="book__text-img" />
+      </div>
+      <!-------------------------------------------------->
+      <div class="book__page">
+        <div class="loading"></div>
+        <video class="book__img" loop="loop" muted="muted" playsinline="playsinline" preload="none">
+          <source src="pages/want-to-the-moon-l_640.mp4" type="video/mp4" />
+        </video>
+        <img data-src="pages/want-to-the-moon-l_text.svg" class="book__text-img" />
+      </div>
+      <div class="book__page">
+        <div class="loading"></div>
+        <video class="book__img" loop="loop" muted="muted" playsinline="playsinline" preload="none">
+          <source src="pages/want-to-the-moon-r_640.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <!-------------------------------------------------->
+      <div class="book__page">
+        <div class="loading"></div>
+        <video class="book__img" loop="loop" muted="muted" playsinline="playsinline" preload="none" data-leadof="need-home-r">
+          <source src="pages/need-home-l_640.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="book__page">
+        <div class="loading"></div>
+        <video class="book__img" loop="loop" muted="muted" playsinline="playsinline" preload="none" data-dependant="true" id="need-home-r">
+          <source src="pages/need-home-r_640.mp4" type="video/mp4" />
+        </video>
+        <img data-src="pages/need-home-r_text.svg" class="book__text-img" />
+      </div>
+      <!-------------------------------------------------->
+      <div class="book__page">
+        <div class="loading"></div>
+        <video class="book__img" loop="loop" muted="muted" playsinline="playsinline" preload="none" data-leadof="want-to-film-r">
+          <source src="pages/want-to-film-l_640.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="book__page">
+        <div class="loading"></div>
+        <video class="book__img" loop="loop" muted="muted" playsinline="playsinline" preload="none" data-dependant="true" id="want-to-film-r">
+          <source src="pages/want-to-film-r_640.mp4" type="video/mp4" />
+        </video>
+        <img data-src="pages/want-to-film-r_text.svg" class="book__text-img" />
+      </div>
+      <!-------------------------------------------------->
+      <div class="book__page">
+        <div class="loading"></div>
+        <img class="book__img" src="" data-src="pages/everything-is-project-l_640.jpg" />
+        <img data-src="pages/everything-is-project-l_text.svg" class="book__text-img" />
+      </div>
+      <div class="book__page">
+        <div class="loading"></div>
+        <video class="book__img" loop="loop" muted="muted" playsinline="playsinline" preload="none">
+          <source src="pages/everything-is-project-r_640.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <!-------------------------------------------------->
+      <div class="book__page">
+        <div class="loading"></div>
+        <video class="book__img" loop="loop" muted="muted" playsinline="playsinline" preload="none" data-leadof="target-r">
+          <source src="pages/target-l_640.mp4" type="video/mp4" />
+        </video>
+        <img data-src="pages/target-l_text.svg" class="book__text-img" />
+      </div>
+      <div class="book__page">
+        <div class="loading"></div>
+        <video class="book__img" loop="loop" muted="muted" playsinline="playsinline" preload="none" data-dependant="true" id="target-r">
+          <source src="pages/target-r_640.mp4" type="video/mp4" />
+        </video>
+        <img data-src="pages/target-r_text.svg" class="book__text-img" />
+      </div>
+      <!-------------------------------------------------->
+      <div class="book__page">
+        <div class="loading"></div>
+        <video class="book__img" loop="loop" muted="muted" playsinline="playsinline" preload="none">
+          <source src="pages/project-or-not-l_640.mp4" type="video/mp4" />
+        </video>
+        <img data-src="pages/project-or-not-l_640_text.png" class="book__text-img" />
+        <img data-src="pages/project-or-not-l_text.svg" class="book__text-img" />
+      </div>
+      <div class="book__page">
+        <div class="loading"></div>
+        <video class="book__img" loop="loop" muted="muted" playsinline="playsinline" preload="none">
+          <source src="pages/project-or-not-r_640.mp4" type="video/mp4" />
+        </video>
+        <img data-src="pages/project-or-not-r_640_text.png" class="book__text-img" />
+        <img data-src="pages/project-or-not-r_text.svg" class="book__text-img" />
+      </div>
+      <!-------------------------------------------------->
+      <div class="book__page">
+        <div class="loading"></div>
+        <video class="book__img" loop="loop" muted="muted" playsinline="playsinline" preload="none" data-leadof="deadline-r">
+          <source src="pages/deadline-l_640.mp4" type="video/mp4" />
+        </video>
+        <img data-src="pages/deadline-l_640_text.png" class="book__text-img" />
+        <img data-src="pages/deadline-l_text.svg" class="book__text-img" />
+      </div>
+      <div class="book__page">
+        <div class="loading"></div>
+        <video class="book__img" loop="loop" muted="muted" playsinline="playsinline" preload="none" data-dependant="true" id="deadline-r">
+          <source src="pages/deadline-r_640.mp4" type="video/mp4" />
+        </video>
+        <img data-src="pages/deadline-r_640_text.png" class="book__text-img" />
+      </div>
+      <!-------------------------------------------------->
+      <div class="book__page">
+        <div class="loading"></div>
+        <img class="book__img" src="" data-src="pages/manage-l_640.jpg" />
+        <img data-src="pages/manage-l_text.svg" class="book__text-img" />
+      </div>
+      <div class="book__page">
+        <div class="loading"></div>
+        <video class="book__img" loop="loop" muted="muted" playsinline="playsinline" preload="none">
+          <source src="pages/manage-r_640.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <!-------------------------------------------------->
+      <div class="book__page">
+        <div class="loading"></div>
+        <video class="book__img" muted="muted" playsinline="playsinline" preload="none" data-leadof="list-r">
+          <source src="pages/list-l_640.mp4" type="video/mp4" />
+        </video>
+        <img data-src="pages/list-l_640_text.png" class="book__text-img" />
+        <img data-src="pages/list-l_text.svg" class="book__text-img" />
+      </div>
+      <div class="book__page">
+        <div class="loading"></div>
+        <video class="book__img" muted="muted" playsinline="playsinline" preload="none" data-dependant="true" id="list-r">
+          <source src="pages/list-r_640.mp4" type="video/mp4" />
+        </video>
+        <img data-src="pages/list-r_text.svg" class="book__text-img" />
+      </div>
+      <!-------------------------------------------------->
+      <div class="book__page">
+        <div class="loading"></div>
+        <video class="book__img" loop="loop" muted="muted" playsinline="playsinline" preload="none" data-leadof="plan-r">
+          <source src="pages/plan-l_640.mp4" type="video/mp4" />
+        </video>
+        <img data-src="pages/plan-l_640_text.png" class="book__text-img" />
+        <img data-src="pages/plan-l_text.svg" class="book__text-img" />
+      </div>
+      <div class="book__page">
+        <div class="loading"></div>
+        <video class="book__img" loop="loop" muted="muted" playsinline="playsinline" preload="none" data-dependant="true" id="plan-r">
+          <source src="pages/plan-r_640.mp4" type="video/mp4" />
+        </video>
+        <img data-src="pages/plan-r_640_text.png" class="book__text-img" />
+        <img data-src="pages/plan-r_text.svg" class="book__text-img" />
+      </div>
+      <!-------------------------------------------------->
+      <div class="book__page">
+        <div class="loading"></div>
+        <img class="book__img" src="" data-src="pages/right-order-l_640.jpg" />
+        <img data-src="pages/right-order-l_text.svg" class="book__text-img" />
+      </div>
+      <div class="book__page">
+        <div class="loading"></div>
+        <video class="book__img" loop="loop" muted="muted" playsinline="playsinline" preload="none">
+          <source src="pages/right-order-r_640.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <!-------------------------------------------------->
+      <div class="book__page">
+        <div class="loading"></div>
+        <video class="book__img" muted="muted" playsinline="playsinline" preload="none" id="control-video">
+          <source src="pages/control-l_640.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="book__page control" id="control">
+        <div class="loading"></div>
+        <img data-src="pages/control-r_640.jpg" class="book__img control__back" />
+        <img data-src="pages/control-r_640_text.png" class="book__text-img" />
+        <div class="control__arrow"></div>
+        <div class="control__message"></div>
+        <button class="control__button"></button>
+      </div>
+      <!-------------------------------------------------->
+      <div class="book__page">
+        <div class="loading"></div>
+        <video class="book__img" loop="loop" muted="muted" playsinline="playsinline" preload="none">
+          <source src="pages/writing-report-l_640.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="book__page">
+        <div class="loading"></div>
+        <img class="book__img" src="" data-src="pages/writing-report-r_640.jpg" />
+        <img data-src="pages/writing-report-r_text.svg" class="book__text-img" />
+      </div>
+      <!-------------------------------------------------->
+      <div class="book__page">
+        <div class="loading"></div>
+        <video class="book__img" loop="loop" muted="muted" playsinline="playsinline" preload="none">
+          <source data-src="pages/report-l_640_text.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="book__page">
+        <div class="loading"></div>
+        <video class="book__img" loop="loop" muted="muted" playsinline="playsinline" preload="none">
+          <source data-src="pages/report-r_640_text.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <!-------------------------------------------------->
+      <!-- <div class="book__page">
+        <img class="book__img" src="" data-src="building/img/building-0-l_640.jpg" id="building-leftPage" />
+        <div class="loading"></div>
+      </div>
+      <div class="book__page">
+        <img class="book__img" src="" data-src="building/img/building-0-r_640.jpg" id="building-rightPage" />
+        <div class="building building_phase_0 building_status_loading" id="building">
+          <video class="book__img book__spread building__video" muted="muted" playsinline="playsinline" preload="none" id="building-video" data-dependant="true">
+            <source src="pages/building_1280.mp4" type="video/mp4" />
+          </video>
+          <div class="building__platform" id="building-platform"></div>
+          <div class="building__item building__item_type_cement draggable" id="buildingItem1"></div>
+          <div class="building__item building__item_type_walls draggable" id="buildingItem2"></div>
+          <div class="building__item building__item_type_roof draggable" id="buildingItem3"></div>
+          <div class="building__item building__item_type_light draggable" id="buildingItem4"></div>
+          <div class="building__item building__item_type_windows draggable" id="buildingItem5"></div>
+        </div>
+        <div class="loading"></div>
+      </div> -->
+      <!-------------------------------------------------->
+      <div class="book__page">
+        <div class="loading"></div>
+        <img class="book__img" src="" data-src="pages/cover-back_640.jpg" />
+      </div>
+      <!-------------------------------------------------->
+    </div>
+    <div class="links content__links">
+      <a
+        href="https://www.instagram.com/maristorii/"
+        target="_blank"
+        class="links__item links__item_type_insta"
+        title="Instagram: maristorii"
+      ></a>
+      <a
+        href="../"
+        class="links__item links__item_type_home"
+        title="На главную"
+      ></a>
+      <a
+        id="lang-link"
+        href=""
+        class="links__item links__item_type_lang lang-link"
+        title="Переключить язык"
+      ></a>
+    </div>
+  </div>
+  <button class="fullscreen-button" id="fullscreenButton"></button>
+
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(55540834, "init", {
+      clickmap:true,
+      trackLinks:true,
+      accurateTrackBounce:true
+    });
+  </script>
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/55540834" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
+</body>
+</html>

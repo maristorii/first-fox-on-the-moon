@@ -1,0 +1,140 @@
+.building {
+  overflow: hidden;
+  width: 200%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  user-select: none;
+}
+
+.building__item {
+  position: absolute;
+  /*background-color: rgba(0, 255, 0, 0.5);*/
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: var(--width);
+  height: calc(var(--width) / var(--item-aspect-ratio) * 2 * var(--page-aspect-ratio));
+}
+
+.building_status_loading .building__item {
+  display: none;
+}
+
+.book__page_current .building__item {
+  pointer-events: all;
+}
+
+.building__item_type_cement {
+  background-image: url('img/cement.png');
+  --item-aspect-ratio: calc(670 / 1000);
+  border-radius: 35% 35% 25% 25%;
+  --width: 9%;
+  top: 20%;
+  left: 65%;
+
+  z-index: 1;
+}
+
+.building_phase_2 .building__item_type_cement,
+.building_phase_3 .building__item_type_cement,
+.building_phase_4 .building__item_type_cement,
+.building_phase_5 .building__item_type_cement,
+.building_phase_6 .building__item_type_cement,
+.building_phase_7 .building__item_type_cement,
+.building_phase_8 .building__item_type_cement,
+.building_phase_9 .building__item_type_cement {
+  display: none;
+}
+
+.building__item_type_walls {
+  background-image: url('img/walls.png');
+  --item-aspect-ratio: calc(1230 / 860);
+  border-radius: 35% 65% 35% 60%;
+  --width: 18%;
+  top: 37%;
+  left: 70%;
+
+  z-index: 3;
+}
+
+.building_phase_4 .building__item_type_walls,
+.building_phase_5 .building__item_type_walls,
+.building_phase_6 .building__item_type_walls,
+.building_phase_7 .building__item_type_walls,
+.building_phase_8 .building__item_type_walls,
+.building_phase_9 .building__item_type_walls {
+  display: none;
+}
+
+.building__item_type_roof {
+  background-image: url('img/roof.png');
+  --item-aspect-ratio: calc(940 / 780);
+  border-radius: 75% 30% 50% 55% / 35% 80% 30% 75%;
+  --width: 13%;
+  top: 58%;
+  left: 85%;
+
+  z-index: 5;
+}
+
+.building_phase_6 .building__item_type_roof,
+.building_phase_7 .building__item_type_roof,
+.building_phase_8 .building__item_type_roof,
+.building_phase_9 .building__item_type_roof {
+  display: none;
+}
+
+.building__item_type_light {
+  background-image: url('img/light.png');
+  --item-aspect-ratio: calc(1400 / 800);
+  border-radius: 8% 90% 50% 50% / 10% 50% 50% 90%;
+  --width: 18%;
+  top: 45%;
+  left: 80%;
+
+  z-index: 4;
+}
+
+.building_phase_8 .building__item_type_light,
+.building_phase_9 .building__item_type_light {
+  display: none;
+}
+
+.building__item_type_windows {
+  background-image: url('img/windows.png');
+  --item-aspect-ratio: calc(1100 / 1040);
+  border-radius: 60% 40% 45% 50% / 45% 10% 90% 55%;
+  --width: 18%;
+  top: 22%;
+  left: 80%;
+
+  z-index: 2;
+}
+
+.building_phase_9 .building__item_type_windows {
+  display: none;
+}
+
+.building__platform {
+  position: absolute;
+
+  /*background-color: rgba(255, 0, 0, 0.25);*/
+  width: 48%;
+  height: 40%;
+  left: 27%;
+  top: 55%;
+}
+
+
+
+
+.draggable {
+  --x: 0;
+  --y: 0;
+  transform: translate(calc(var(--x) * 1px), calc(var(--y) * 1px));
+}
+
+.draggable_dragging {
+  z-index: 10;
+}

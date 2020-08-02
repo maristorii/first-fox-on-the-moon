@@ -1,0 +1,24 @@
+<svg height="690" viewBox="0 0 640 690" width="640" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text {
+      font: 20px arial;
+      fill: black;
+    }
+  </style>
+
+  <text>
+    <tspan x="65" y="170">А знаешь ли ты, что и полёт</tspan>
+    <tspan x="65" dy="25">на Луну, и строительство</tspan>
+    <tspan x="65" dy="25">домика для пчёл, и съёмки</tspan>
+    <tspan x="65" dy="25">фильма – это п р о е к т ?</tspan>
+    <tspan x="65" dy="25">Это очень важное знание,</tspan>
+    <tspan x="65" dy="25">именно оно поможет</tspan>
+    <tspan x="65" dy="25">друзьям достигнуть их цели.</tspan>
+    <tspan x="65" dy="25">Как? А сейчас ты всё и поймёшь.</tspan>
+    <tspan x="65" dy="25">Только смотри внимательно,</tspan>
+    <tspan x="65" dy="25">вдруг тебе тоже когда-нибудь</tspan>
+    <tspan x="65" dy="25">захочется сделать проект.</tspan>
+    <tspan x="65" dy="25">Тогда-то ты и вспомнишь эту</tspan>
+    <tspan x="65" dy="25">историю.</tspan>
+  </text>
+</svg>
