@@ -232,6 +232,9 @@ window.onload = () => {
 
   body.classList.add(`body_lang_${lang}`);
 
+  const homeLink = document.getElementById('homeLink');
+  homeLink.href = lang === 'tat' ? 'https://salam.maribooks.ru/' : 'https://hello.maribooks.ru/';
+
   if (body.requestFullscreen) {
     body.classList.add('body_canBeFullscreen');
   }
