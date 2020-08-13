@@ -39,6 +39,22 @@
   --b-radius-v: calc(var(--b-radius-h) * var(--page-aspect-ratio));
   border-radius: var(--b-radius-h)/var(--b-radius-v);
 }
+
+.book__after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  width: 50%;
+  pointer-events: none;
+
+  overflow: hidden;
+}
+.book_finished:not(.book_active-side_left):not(.book_active-side_right) .book__after {
+  pointer-events: all;
+}
+
 .book__page:nth-child(odd) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;

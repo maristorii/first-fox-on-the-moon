@@ -204,6 +204,12 @@ class Book {
     this._pages[this._currentPage + 2] && this._pages[this._currentPage + 2].classList.add('book__page_next', 'book__page_first-next');
     this._pages[this._currentPage + 3] && this._pages[this._currentPage + 3].classList.add('book__page_next', 'book__page_second-next');
 
+    if (this._currentPage === this._pages.length - 1) {
+      this._bookElem.classList.add('book_finished');
+    } else {
+      this._bookElem.classList.remove('book_finished');
+    }
+
     this._bookElem.dispatchEvent(new CustomEvent('currentPageChange', {
       detail: {
         currentPage: this._currentPage,
@@ -325,8 +331,16 @@ class Book {
     this._finishingTicker = null;
   }
 
+  get bookDomElement() {
+    return this._bookElem;
+  }
+
   get isPageTurning() {
     return this._finishingDirection !== 0;
+  }
+
+  get isFinished() {
+    return this._currentPage == this._pages.length - 1;
   }
 
   get currentPage() {

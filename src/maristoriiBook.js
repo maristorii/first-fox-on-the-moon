@@ -232,8 +232,13 @@ window.onload = () => {
 
   body.classList.add(`body_lang_${lang}`);
 
-  const homeLink = document.getElementById('homeLink');
-  homeLink.href = lang === 'tat' ? 'https://salam.maribooks.ru/' : 'https://hello.maribooks.ru/';
+  Array.from(document.getElementsByClassName('homeLink'))
+    .forEach(link => {
+      link.href = lang === 'tat' ? 'https://salam.maribooks.ru/#zayavka' : 'https://hello.maribooks.ru/#zayavka';
+    });
+
+  Array.from(document.getElementsByClassName('homeLink__image'))
+  .forEach(image => image.setAttribute('src', image.dataset.src.replace('_text.', `_text-${lang}.`)));
 
   if (body.requestFullscreen) {
     body.classList.add('body_canBeFullscreen');
