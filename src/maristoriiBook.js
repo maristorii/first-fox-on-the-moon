@@ -234,11 +234,21 @@ window.onload = () => {
 
   Array.from(document.getElementsByClassName('homeLink'))
     .forEach(link => {
-      link.href = lang === 'tat' ? 'https://salam.maribooks.ru/#zayavka' : 'https://hello.maribooks.ru/#zayavka';
+      link.href = lang === 'tat' ? 'https://salam.maribooks.ru/' : 'https://hello.maribooks.ru/';
     });
 
-  Array.from(document.getElementsByClassName('homeLink__image'))
-  .forEach(image => image.setAttribute('src', image.dataset.src.replace('_text.', `_text-${lang}.`)));
+  Array.from(document.getElementsByClassName('links__item_type_after'))
+    .forEach(link => {
+      link.href = lang === 'tat' ? 'https://salam.maribooks.ru/#заявка' : 'https://hello.maribooks.ru/#zayavka';
+    });
+
+  Array.from(document.querySelectorAll('video.homeLink__image'))
+    .forEach(video => {
+      const source = video.querySelector('source');
+      source.setAttribute('src', source.dataset.src.replace('_text.', `_text-${lang}.`));
+      video.load();
+      video.play();
+    });
 
   if (body.requestFullscreen) {
     body.classList.add('body_canBeFullscreen');
