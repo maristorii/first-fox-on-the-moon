@@ -24,7 +24,7 @@ html {
   position: absolute;
   top: 5%;
   left: 0;
-  width: 50%;
+  width: 100%;
   clip-path: circle(45% at 48% 45%);
 }
 .content__hint-video {
@@ -135,13 +135,13 @@ html {
   transform: none;
 }
 
-.content__hint, .book__before {
+.content__hint, .content__before-img {
   display: none;
 }
 .body_lang_tat .content__hint {
   display: block;
 }
-.body_lang_ru .book__before {
+.body_lang_ru .content__before-img {
   display: block;
 }
 

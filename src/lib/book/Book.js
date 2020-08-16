@@ -53,38 +53,10 @@ class Book {
     }
     addEventListener('keydown', event => {
       if ([34, 39].includes(event.keyCode)) {
-        if (this._currentPage + 2 >= this._pages.length) {
-          return;
-        }
-
-        this._setActivePage(this._currentPage + 1);
-        this._setActivePagePosition(1);
-        this._setFuturePage(this._currentPage + 2);
-
-        this._setPageVisibility(this._currentPage - 2, false);
-        this._setPageVisibility(this._currentPage + 2, true);
-        this._startFinishing(-1);
-
-        this._bookElem.dispatchEvent(new CustomEvent('pageTurningStatusChange', {
-          detail: { pageIsTurning: true },
-        }));
+        this.goForward();
       }
       if ([33, 37].includes(event.keyCode)) {
-        if (this._currentPage === -1) {
-          return;
-        }
-
-        this._setActivePage(this._currentPage - 1);
-        this._setActivePagePosition(-1);
-        this._setFuturePage(this._currentPage - 2);
-
-        this._setPageVisibility(this._currentPage + 3, false);
-        this._setPageVisibility(this._currentPage - 1, true);
-        this._startFinishing(1);
-
-        this._bookElem.dispatchEvent(new CustomEvent('pageTurningStatusChange', {
-          detail: { pageIsTurning: true },
-        }));
+        this.goBack();
       }
     });
   }
@@ -240,6 +212,12 @@ class Book {
     this._pages[this._currentPage + 2] && this._pages[this._currentPage + 2].classList.add('book__page_next', 'book__page_first-next');
     this._pages[this._currentPage + 3] && this._pages[this._currentPage + 3].classList.add('book__page_next', 'book__page_second-next');
 
+    if (this._currentPage === - 1) {
+      this._bookElem.classList.add('book_closed');
+    } else {
+      this._bookElem.classList.remove('book_closed');
+    }
+
     if (this._currentPage === this._pages.length - 1) {
       this._bookElem.classList.add('book_finished');
     } else {
@@ -367,12 +345,52 @@ class Book {
     this._finishingTicker = null;
   }
 
+  goForward() {
+    if (this._currentPage + 2 >= this._pages.length) {
+      return;
+    }
+
+    this._setActivePage(this._currentPage + 1);
+    this._setActivePagePosition(1);
+    this._setFuturePage(this._currentPage + 2);
+
+    this._setPageVisibility(this._currentPage - 2, false);
+    this._setPageVisibility(this._currentPage + 2, true);
+    this._startFinishing(-1);
+
+    this._bookElem.dispatchEvent(new CustomEvent('pageTurningStatusChange', {
+      detail: { pageIsTurning: true },
+    }));
+  }
+
+  goBack() {
+    if (this._currentPage === -1) {
+      return;
+    }
+
+    this._setActivePage(this._currentPage - 1);
+    this._setActivePagePosition(-1);
+    this._setFuturePage(this._currentPage - 2);
+
+    this._setPageVisibility(this._currentPage + 3, false);
+    this._setPageVisibility(this._currentPage - 1, true);
+    this._startFinishing(1);
+
+    this._bookElem.dispatchEvent(new CustomEvent('pageTurningStatusChange', {
+      detail: { pageIsTurning: true },
+    }));
+  }
+
   get bookDomElement() {
     return this._bookElem;
   }
 
   get isPageTurning() {
     return this._finishingDirection !== 0;
+  }
+
+  get isClosed() {
+    return this._currentPage == - 1;
   }
 
   get isFinished() {

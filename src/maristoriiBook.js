@@ -265,4 +265,6 @@ window.onload = () => {
       body.classList.add('body_fullscreen');
     }
   });
+  Array.from(document.getElementsByClassName('content__hint'))
+    .forEach(hint => hint.addEventListener('click', e => book.goForward()));
 };

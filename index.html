@@ -37,16 +37,16 @@
 </head>
 <body class="body" id="body">
   <div class="content" id="content">
-    <div class="content__hint">
-      <video class="content__hint-video" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline">
-        <source data-src="img/hint_640_text.mp4" type="video/mp4" />
-      </video>
-    </div>
     <div class="book content__book" id="book">
       <!-------------------------------------------------->
       <div class="book__before">
-        <img src="src/img/before.png" class="book__text-img" />
-      </div>
+        <img src="src/img/before.png" class="book__text-img content__before-img" />
+        <div class="content__hint">
+          <video class="content__hint-video" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline">
+            <source data-src="img/hint_640_text.mp4" type="video/mp4" />
+          </video>
+        </div>
+          </div>
       <div class="book__page">
         <div class="loading"></div>
         <video class="book__img" loop="loop" muted="muted" playsinline="playsinline" preload="none">

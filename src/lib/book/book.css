@@ -57,6 +57,9 @@
 .book__before {
   left: 0;
 }
+.book_closed:not(.book_active-side_left):not(.book_active-side_right) .book__before {
+  pointer-events: all;
+}
 .book_finished:not(.book_active-side_left):not(.book_active-side_right) .book__after {
   pointer-events: all;
 }
