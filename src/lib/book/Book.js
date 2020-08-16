@@ -51,6 +51,42 @@ class Book {
       window.addEventListener('mousemove', this._drag.bind(this));
       window.addEventListener('mouseup', this._dragEnd.bind(this));
     }
+    addEventListener('keydown', event => {
+      if ([34, 39].includes(event.keyCode)) {
+        if (this._currentPage + 2 >= this._pages.length) {
+          return;
+        }
+
+        this._setActivePage(this._currentPage + 1);
+        this._setActivePagePosition(1);
+        this._setFuturePage(this._currentPage + 2);
+
+        this._setPageVisibility(this._currentPage - 2, false);
+        this._setPageVisibility(this._currentPage + 2, true);
+        this._startFinishing(-1);
+
+        this._bookElem.dispatchEvent(new CustomEvent('pageTurningStatusChange', {
+          detail: { pageIsTurning: true },
+        }));
+      }
+      if ([33, 37].includes(event.keyCode)) {
+        if (this._currentPage === -1) {
+          return;
+        }
+
+        this._setActivePage(this._currentPage - 1);
+        this._setActivePagePosition(-1);
+        this._setFuturePage(this._currentPage - 2);
+
+        this._setPageVisibility(this._currentPage + 3, false);
+        this._setPageVisibility(this._currentPage - 1, true);
+        this._startFinishing(1);
+
+        this._bookElem.dispatchEvent(new CustomEvent('pageTurningStatusChange', {
+          detail: { pageIsTurning: true },
+        }));
+      }
+    });
   }
 
   _setPageVisibility(pageIndex, visible) {

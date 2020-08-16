@@ -40,16 +40,22 @@
   border-radius: var(--b-radius-h)/var(--b-radius-v);
 }
 
-.book__after {
+.book__after,
+.book__before {
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 0;
   z-index: 0;
   width: 50%;
   pointer-events: none;
 
   overflow: hidden;
+}
+.book__after {
+  right: 0;
+}
+.book__before {
+  left: 0;
 }
 .book_finished:not(.book_active-side_left):not(.book_active-side_right) .book__after {
   pointer-events: all;
@@ -65,6 +71,22 @@
   border-bottom-right-radius: 0;
   border-right: none;
 }
+
+.book__before ~ .book__page:nth-child(even) {
+  border: var(--border);
+  border-radius: var(--b-radius-h)/var(--b-radius-v);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: none;
+}
+.book__before ~ .book__page:nth-child(odd) {
+  border: var(--border);
+  border-radius: var(--b-radius-h)/var(--b-radius-v);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: none;
+}
+
 .book__page_visible {
   display: block;
 }
@@ -93,9 +115,25 @@
   right: 50%;
   transform-origin: right;
 }
+.book__before ~ .book__page:nth-child(even) {
+  right: initial;
+  left: 50%;
+  transform-origin: left;
+}
+.book__before ~ .book__page:nth-child(odd) {
+  left: initial;
+  right: 50%;
+  transform-origin: right;
+}
 .book__page_active:nth-child(odd) {
   transform: perspective(var(--transform-perspective)) rotateY(calc(-90deg + var(--active-page-position) * 90deg));
 }
 .book__page_active:nth-child(even) {
+  transform: perspective(var(--transform-perspective)) rotateY(calc(90deg + var(--active-page-position) * 90deg));
+}
+.book__before ~ .book__page_active:nth-child(even) {
+  transform: perspective(var(--transform-perspective)) rotateY(calc(-90deg + var(--active-page-position) * 90deg));
+}
+.book__before ~ .book__page_active:nth-child(odd) {
   transform: perspective(var(--transform-perspective)) rotateY(calc(90deg + var(--active-page-position) * 90deg));
 }
