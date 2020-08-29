@@ -111,12 +111,16 @@ html {
   background-image: url(img/horse_80.png);
   --aspect-ratio: calc(88 / 80);
 }
+.links__item_type_help {
+  background-image: url(img/help_300.png);
+  --aspect-ratio: calc(300 / 80);
+}
 .links__item_type_after {
   opacity: 1;
   display: inline-block;
   height: initial;
-  width: 56%;
-  left: 22%;
+  width: 80%;
+  left: 10%;
   top: 30%;
 }
 .links__image {
