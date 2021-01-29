@@ -232,11 +232,6 @@ window.onload = () => {
 
   body.classList.add(`body_lang_${lang}`);
 
-  Array.from(document.getElementsByClassName('homeLink'))
-    .forEach(link => {
-      link.href = lang === 'tat' ? 'https://salam.maribooks.ru/' : 'https://hello.maribooks.ru/';
-    });
-
   Array.from(document.getElementsByClassName('links__item_type_after'))
     .forEach(link => {
       link.href = lang === 'tat' ? 'https://salam.maribooks.ru/#заявка' : 'https://hello.maribooks.ru/#zayavka';

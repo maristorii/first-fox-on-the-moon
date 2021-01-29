@@ -140,7 +140,7 @@ html {
 }
 
 .content__hint, .content__before-img {
-  display: none;
+  display: block;
 }
 .body_lang_tat .content__hint {
   display: block;

@@ -34,7 +34,7 @@
 
 .control_phase_landing .control__arrow::before,
 .control_phase_complete .control__arrow::before {
-    transform: rotate(400deg);
+  transform: rotate(400deg);
 }
 
 .control__arrow {
