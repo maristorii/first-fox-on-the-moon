@@ -70,25 +70,29 @@
   width: 83%;
   top: 7.5%;
   left: 13%;
-  clip-path: polygon(48% 48%, 48% 0%, 0% 0%, 0% 48%, 100% 48%, 100% 0%, 52% 0%, 52% 52%, 74% 52%, 74% 100%, 26% 100%, 26% 52%, 52% 52%, 52% 48%);
+  z-index: -1;
 }
-.movie__video-big {
-  width: 140%;
-}
-.movie_current-camera_1 .movie__video-big {
+.movie__video-big-container {
+  --width: 67%;
+  --item-aspect-ratio: calc(896/570);
   top: 12%;
   left: 20%;
-  clip-path: inset(0 52% 52% 0);
+  overflow: hidden;
+}
+.movie__video-big {
+  width: 208%;
+}
+.movie_current-camera_1 .movie__video-big {
+  top: 0%;
+  left: 0%;
 }
 .movie_current-camera_2 .movie__video-big {
-  top: 12%;
-  left: -53%;
-  clip-path: inset(0 0 52% 52%);
+  top: 0%;
+  left: -108%;
 }
 .movie_current-camera_3 .movie__video-big {
-  top: -31.5%;
-  left: -16.5%;
-  clip-path: inset(52% 26% 0 26%);
+  top: -108%;
+  left: -54%;
 }
 
 /* Number buttons */
