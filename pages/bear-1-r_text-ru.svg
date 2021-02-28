@@ -1,0 +1,19 @@
+<svg height="690" viewBox="0 0 640 690" width="640" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text {
+      font: 20px arial;
+      fill: black;
+    }
+  </style>
+
+  <text>
+    <tspan x="160" y="515">Вот какие вопросы Медведь решил задать:</tspan>
+    <tspan x="160" dy="25">Какого размера должен быть дом?</tspan>
+    <tspan x="160" dy="25">Какого цвета?</tspan>
+    <tspan x="160" dy="25">Сколько в нём будет окошек?</tspan>
+    <tspan x="160" dy="25">Может, есть другие пожелания?</tspan>
+
+    <tspan x="160" dy="38">Какие ещё вопросы можно задать</tspan>
+    <tspan x="160" dy="25">будущим жильцам дома?</tspan>
+  </text>
+</svg>

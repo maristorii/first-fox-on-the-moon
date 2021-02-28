@@ -9,6 +9,19 @@ html {
 .book__img {
   width: 100%;
 }
+.book__img_absolute {
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.book__img_left {
+  left: -100%;
+}
+.book_active-side_left .book__img_left,
+.book_active-side_right .book__img_left {
+  display: none;
+}
+
 .book__page {
   background-color: #ddd;
   line-height: 0;
@@ -218,12 +231,24 @@ html {
 }
 .book__img {
   overflow: hidden;
+  user-select: none;
 }
 .book__text-img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  user-select: none;
+}
+.book__text-img_wide {
+  width: 200%;
+}
+.book__page:nth-child(odd) .book__text-img_wide {
+  clip-path: inset(0 50% 0 0);
+}
+.book__page:nth-child(even) .book__text-img_wide {
+  left: -100%;
+  clip-path: inset(0 0 0 50%);
 }
 
 .book__page:nth-child(odd) .book__img {
@@ -248,7 +273,7 @@ html {
   border-bottom-right-radius: 0;
 }
 
-.book__page.book__page .book__spread {
+.book__page.book__page .book__spread.book__img {
   position: absolute;
   left: 0;
   top: 0;
@@ -269,3 +294,83 @@ html {
 /* .book__page:nth-child(2n) > * {
   margin-right: -1px;
 } */
+
+/* Open animation */
+@keyframes finger {
+  0% {
+    left: 90%;
+    background-image: url('img/finger-up_128.png');
+  }
+  20% {
+    background-image: url('img/finger-up_128.png');
+  }
+  21% {
+    background-image: url('img/finger-down_128.png');
+  }
+  40% {
+    left: 90%;
+  }
+  60% {
+    left: 75%;
+  }
+  80% {
+    background-image: url('img/finger-down_128.png');
+  }
+  81% {
+    background-image: url('img/finger-up_128.png');
+  }
+  100% {
+    left: 75%;
+    background-image: url('img/finger-up_128.png');
+  }
+}
+
+@keyframes page {
+  0% {
+    transform: perspective(var(--transform-perspective)) rotateY(0);
+  }
+  40% {
+    transform: perspective(var(--transform-perspective)) rotateY(0);
+  }
+  60% {
+    transform: perspective(var(--transform-perspective)) rotateY(-45deg);
+  }
+  81% {
+    transform: perspective(var(--transform-perspective)) rotateY(-45deg);
+  }
+  100% {
+    transform: perspective(var(--transform-perspective)) rotateY(0);
+  }
+}
+
+.finger {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  --size: 10%;
+  width: var(--size);
+  height: calc(var(--size) * var(--page-aspect-ratio) * 2);
+  background-size: cover;
+  transform: translate(-50%, -50%);
+  top: 94%;
+}
+
+.animation .book_closed:not(.book_active-side_left):not(.book_active-side_right) .finger {
+  display: block;
+  animation-name: finger;
+  animation-delay: 2s;
+  animation-duration: 2s;
+  animation-iteration-count: 2;
+}
+
+.animation .book_closed:not(.book_active-side_left):not(.book_active-side_right) .book__page:nth-child(2) {
+  animation-name: page;
+  animation-delay: 2s;
+  animation-duration: 2s;
+  animation-iteration-count: 2;
+}
+
+.animation .book_closed:not(.book_active-side_left):not(.book_active-side_right) .book__page:nth-child(4) {
+  display: block;
+  opacity: 1;
+}

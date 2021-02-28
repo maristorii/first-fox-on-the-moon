@@ -1,0 +1,15 @@
+<svg height="690" viewBox="0 0 640 690" width="640" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text {
+      font: 20px arial;
+      fill: black;
+    }
+  </style>
+
+  <text>
+    <tspan x="50" y="60">Для начала Кот решил показать фильм своей семье.</tspan>
+    <tspan x="50" dy="25">Он позвал папу, маму, бабушку и даже сестрёнку.</tspan>
+    <tspan x="50" dy="25">Кот очень гордился тем, что получилось,</tspan>
+    <tspan x="50" dy="25">и уже приготовился принимать комплименты...</tspan>
+  </text>
+</svg>

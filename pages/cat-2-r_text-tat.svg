@@ -1,0 +1,16 @@
+<svg height="690" viewBox="0 0 640 690" width="640" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text {
+      font: 20px arial;
+      fill: black;
+    }
+  </style>
+
+  <text>
+    <tspan x="50" y="60">“Ә бу фильм нәрсә турында?”</tspan>
+    <tspan x="50" dy="25">“Ә монда нинди дә булса вакыйга булачакмы?”</tspan>
+    <tspan x="50" dy="25">“Декорацияләр бигрәк күңелсез...”</tspan>
+    <tspan x="50" dy="25">Ай, Мәче бит бөтенләй башка сүзләр ишетергә</tspan>
+    <tspan x="50" dy="25">әзерләнгән иде!</tspan>
+  </text>
+</svg>

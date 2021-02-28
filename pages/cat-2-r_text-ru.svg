@@ -1,0 +1,15 @@
+<svg height="690" viewBox="0 0 640 690" width="640" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text {
+      font: 20px arial;
+      fill: black;
+    }
+  </style>
+
+  <text>
+    <tspan x="50" y="60">«А про что этот фильм?»</tspan>
+    <tspan x="50" dy="25">«А тут что-нибудь ещё произойдёт?»</tspan>
+    <tspan x="50" dy="25">«Декорации какие-то скучные...»</tspan>
+    <tspan x="50" dy="25">Ой! Кажется, это совсем не то, что ожидал услышать Кот!</tspan>
+  </text>
+</svg>

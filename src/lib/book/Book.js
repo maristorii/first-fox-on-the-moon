@@ -36,29 +36,43 @@ class Book {
     this._setPageVisibility(this._currentPage + 1, true);
     this._setPageVisibility(this._currentPage + 3, true);
 
-    if (this.ENABLE_POINTER_EVENTS && window.PointerEvent) {
-      this._bookElem.addEventListener('pointerdown', this._dragStart.bind(this));
-      window.addEventListener('pointermove', this._drag.bind(this));
-      window.addEventListener('pointerup', this._dragEnd.bind(this));
-      window.addEventListener('pointercancel', this._dragEnd.bind(this));
-    } else {
-      this._bookElem.addEventListener('touchstart', this._dragStart.bind(this));
-      window.addEventListener('touchmove', this._drag.bind(this));
-      window.addEventListener('touchend', this._dragEnd.bind(this));
-      window.addEventListener('touchcancel', this._dragEnd.bind(this));
+    this._dragStart = this._dragStart.bind(this);
+    this._drag = this._drag.bind(this);
+    this._dragEnd = this._dragEnd.bind(this);
+    this._onKeyDown = this._onKeyDown.bind(this);
+    this.goForward = this.goForward.bind(this);
+    this.goBack = this.goBack.bind(this);
 
-      this._bookElem.addEventListener('mousedown', this._dragStart.bind(this));
-      window.addEventListener('mousemove', this._drag.bind(this));
-      window.addEventListener('mouseup', this._dragEnd.bind(this));
+    if (this.ENABLE_POINTER_EVENTS && window.PointerEvent) {
+      this._bookElem.addEventListener('pointerdown', this._dragStart);
+      window.addEventListener('pointermove', this._drag);
+      window.addEventListener('pointerup', this._dragEnd);
+      window.addEventListener('pointercancel', this._dragEnd);
+    } else {
+      this._bookElem.addEventListener('touchstart', this._dragStart);
+      window.addEventListener('touchmove', this._drag);
+      window.addEventListener('touchend', this._dragEnd);
+      window.addEventListener('touchcancel', this._dragEnd);
+
+      this._bookElem.addEventListener('mousedown', this._dragStart);
+      window.addEventListener('mousemove', this._drag);
+      window.addEventListener('mouseup', this._dragEnd);
     }
-    addEventListener('keydown', event => {
-      if ([34, 39].includes(event.keyCode)) {
-        this.goForward();
-      }
-      if ([33, 37].includes(event.keyCode)) {
-        this.goBack();
-      }
-    });
+    addEventListener('keydown', this._onKeyDown);
+  }
+
+  _onKeyDown(event) {
+    if (this._activePage !== null) {
+      return;
+    }
+
+    if ([34, 39].includes(event.keyCode)) {
+      this.goForward();
+    }
+
+    if ([33, 37].includes(event.keyCode)) {
+      this.goBack();
+    }
   }
 
   _setPageVisibility(pageIndex, visible) {

@@ -1,0 +1,16 @@
+<svg height="690" viewBox="0 0 640 690" width="640" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text {
+      font: 20px arial;
+      fill: black;
+    }
+  </style>
+
+  <text>
+    <tspan x="50" y="60">Беренче эш итеп Мәче фильмны гаиләсенә күрсәтергә</tspan>
+    <tspan x="50" dy="25">булды. Ул әтисен, әнисен, әбисен һәм хәтта</tspan>
+    <tspan x="50" dy="25">сеңелесен  дә чакырып китерде.  Мәче үзенең эше</tspan>
+    <tspan x="50" dy="25">белән бик горурлана иде, шуңа күрә мактау сүзләре</tspan>
+    <tspan x="50" dy="25">тыңларга әзерләнде.</tspan>
+  </text>
+</svg>

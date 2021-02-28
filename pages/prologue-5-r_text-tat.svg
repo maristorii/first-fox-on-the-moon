@@ -1,0 +1,14 @@
+<svg height="690" viewBox="0 0 640 690" width="640" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text {
+      font: 20px arial;
+      fill: black;
+    }
+  </style>
+
+  <text>
+    <tspan x="50" y="50">Төлкенең максаты — Айга очу. Аю көзгә йорт салу</tspan>
+    <tspan x="50" dy="25">турында уйлана башлады. Мәче исә үзе уйлап</tspan>
+    <tspan x="50" dy="25">чыгарган сценарий буенча фильм төшерәчәк.</tspan>
+  </text>
+</svg>

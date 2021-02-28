@@ -1,0 +1,18 @@
+<svg height="690" viewBox="0 0 640 690" width="640" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text {
+      font: 20px arial;
+      fill: black;
+    }
+  </style>
+
+  <text>
+    <tspan x="400" y="170">Cмотри, как</tspan>
+    <tspan x="400" dy="25">Медведь всё</tspan>
+    <tspan x="400" dy="25">удобно оформил</tspan>
+    <tspan x="400" dy="25">и даже нарисовал</tspan>
+    <tspan x="400" dy="25">схему будущего</tspan>
+    <tspan x="400" dy="25">дома. Ну не</tspan>
+    <tspan x="400" dy="25">молодец ли?</tspan>
+  </text>
+</svg>

@@ -1,0 +1,17 @@
+<svg height="690" viewBox="0 0 640 690" width="640" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text {
+      font: 20px arial;
+      fill: black;
+    }
+  </style>
+
+  <text>
+    <tspan x="80" y="170">Кажется,</tspan>
+    <tspan x="80" dy="25">Техническое</tspan>
+    <tspan x="80" dy="25">задание на</tspan>
+    <tspan x="80" dy="25">строительство</tspan>
+    <tspan x="80" dy="25">пчелиного</tspan>
+    <tspan x="80" dy="25">домика готово</tspan>
+  </text>
+</svg>

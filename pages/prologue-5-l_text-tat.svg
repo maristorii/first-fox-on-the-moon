@@ -1,0 +1,17 @@
+<svg height="690" viewBox="0 0 640 690" width="640" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text {
+      font: 20px arial;
+      fill: black;
+    }
+  </style>
+
+  <text>
+    <tspan x="50" y="50">Теләсә кайсы, хәтта иң нәни проектның да максаты</tspan>
+    <tspan x="50" dy="25">була. Нәкъ менә картадагы соңгы нокта кебек:</tspan>
+    <tspan x="50" dy="25">кайсы гына юл сайланса да, төп максат бер үк кала.</tspan>
+
+    <tspan x="50" dy="25">Әйдә, Төлке, Аю һәм Мәче алдында торучы</tspan>
+    <tspan x="50" dy="25">максатларны искә төшерик әле.</tspan>
+  </text>
+</svg>

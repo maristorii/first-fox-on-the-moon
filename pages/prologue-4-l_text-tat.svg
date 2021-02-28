@@ -1,0 +1,26 @@
+<svg height="690" viewBox="0 0 640 690" width="640" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text {
+      font: 20px arial;
+      fill: black;
+    }
+  </style>
+
+  <text>
+    <tspan x="65" y="170">Ә син беләсеңме, Айга очу да,</tspan>
+    <tspan x="65" dy="25">бал кортлары өчен йорт төзү дә,</tspan>
+    <tspan x="65" dy="25">фильм төшерү дә — болар барысы</tspan>
+    <tspan x="65" dy="25">да <tspan style="font-weight: bold;">проект</tspan> бит!</tspan>
+
+    <tspan x="65" dy="25">Бу бик мөһим гыйлем, һәм дусларга</tspan>
+    <tspan x="65" dy="25">үз максатларына ирешүдә нәкъ</tspan>
+    <tspan x="65" dy="25">менә проект ярдәм итәчәк тә инде.</tspan>
+
+    <tspan x="65" dy="25">Ничек дисеңме? Хәзер барысын</tspan>
+    <tspan x="65" dy="25">да аңларсын. Ләкин бик игътибар</tspan>
+    <tspan x="65" dy="25">белән кара, бәлки синең үзеңнең</tspan>
+    <tspan x="65" dy="25">дә кайчан да булса проект эшлисең</tspan>
+    <tspan x="65" dy="25">килер әле. Менә шул вакытта инде</tspan>
+    <tspan x="65" dy="25">әлеге тарих  исеңә килер дә төшәр.</tspan>
+  </text>
+</svg>

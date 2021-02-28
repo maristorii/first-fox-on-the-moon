@@ -1,0 +1,14 @@
+<svg height="690" viewBox="0 0 640 690" width="640" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text {
+      font: 20px arial;
+      fill: white;
+    }
+  </style>
+
+  <text>
+    <tspan x="50" y="600">Очень грустно стало Коту от такой реакции. Он</tspan>
+    <tspan x="50" dy="25">спрятался под одеяло и планировал не выходить</tspan>
+    <tspan x="50" dy="25">оттуда как минимум до следующей весны.</tspan>
+  </text>
+</svg>

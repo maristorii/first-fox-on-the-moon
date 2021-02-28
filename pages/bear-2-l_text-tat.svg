@@ -1,0 +1,26 @@
+<svg height="690" viewBox="0 0 640 690" width="640" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text {
+      font: 20px arial;
+      fill: black;
+    }
+  </style>
+
+  <text>
+    <tspan x="50" y="40">Ярый, Аю үзенең бөтен сорауларына да җаваплар алды ди.</tspan>
+    <tspan x="50" dy="25">Тик менә бу кәгазь өеменә кара әле — </tspan>
+    <tspan x="50" dy="25">кирәклесен табар өчен күпме актарынырга</tspan>
+    <tspan x="50" dy="25">кирәк монда!</tspan>
+
+    <tspan x="50" dy="25">Мәсәлән, безгә төзелеш өчен</tspan>
+    <tspan x="50" dy="25">материал сайларга кирәк. Йәле,</tspan>
+    <tspan x="50" dy="25">Аю, әлеге соравыңа бал</tspan>
+    <tspan x="50" dy="25">кортлары ни дип җавап</tspan>
+    <tspan x="50" dy="25">бирде икән? Җавап</tspan>
+    <tspan x="50" dy="25">язылган кәгазь кайда</tspan>
+    <tspan x="50" dy="25">әле ул? Ярар,</tspan>
+    <tspan x="50" dy="25">ә йортның зурлыгы</tspan>
+    <tspan x="50" dy="25">турындагысы</tspan>
+    <tspan x="50" dy="25">кайда?</tspan>
+  </text>
+</svg>

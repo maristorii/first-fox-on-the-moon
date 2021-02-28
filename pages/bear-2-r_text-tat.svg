@@ -1,0 +1,25 @@
+<svg height="690" viewBox="0 0 640 690" width="640" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text {
+      font: 20px arial;
+      fill: black;
+    }
+  </style>
+
+
+
+
+  <text>
+    <tspan x="50" y="40">Уф, бу кәгазь өеме белән нишләргә соң? Кирәкле</tspan>
+    <tspan x="150" dy="25">мәгълүматны эзләгән саен өемнең астын-өскә</tspan>
+    <tspan x="230" dy="25">китереп булмый бит инде!</tspan>
+
+    <tspan x="270" dy="25">Әйдә барлык кәгазьләрне дә</tspan>
+    <tspan x="310" dy="25">уңайлы бер документка туплыйк</tspan>
+    <tspan x="340" dy="25">әле. Без аны “Техник</tspan>
+    <tspan x="365" dy="25">йөкләмә” дип атарбыз.</tspan>
+    <tspan x="385" dy="25">Аю йортны менә шушы</tspan>
+    <tspan x="397" dy="25">йөкләмә буенча</tspan>
+    <tspan x="407" dy="25">төзер дә инде.</tspan>
+  </text>
+</svg>

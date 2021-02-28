@@ -1,0 +1,19 @@
+<svg height="690" viewBox="0 0 640 690" width="640" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text {
+      font: 20px arial;
+      fill: #2d2d2f;
+    }
+  </style>
+
+  <text>
+    <tspan x="250" y="400">Ура! Бүген Мәче төшергән</tspan>
+    <tspan x="250" dy="25">фильмның премьерасы. Әнә</tspan>
+    <tspan x="250" dy="25">кара, тамашачылар фильмны</tspan>
+    <tspan x="250" dy="25">карап бетерделәр. Ә хәзер</tspan>
+    <tspan x="250" dy="25">Мәче үзенең эше турында</tspan>
+    <tspan x="250" dy="25">сөйләр өчен сәхнәгә чыкты.</tspan>
+    <tspan x="250" dy="25">Карап карыйк әле, ул нинди</tspan>
+    <tspan x="250" dy="25">нәтиҗәләр ясады икән?</tspan>
+  </text>
+</svg>

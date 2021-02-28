@@ -1,0 +1,16 @@
+<svg height="690" viewBox="0 0 640 690" width="640" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text {
+      font: 20px arial;
+      fill: black;
+    }
+  </style>
+
+  <text>
+    <tspan x="400" y="170">Хәтта булачак</tspan>
+    <tspan x="400" dy="25">йортның схемасын</tspan>
+    <tspan x="400" dy="25">да ясап куйды ул.</tspan>
+    <tspan x="400" dy="25">Бигрәк булдыклы</tspan>
+    <tspan x="400" dy="25">безнең Аю, әйеме?</tspan>
+  </text>
+</svg>

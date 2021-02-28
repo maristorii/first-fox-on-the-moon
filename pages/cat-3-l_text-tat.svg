@@ -1,0 +1,15 @@
+<svg height="690" viewBox="0 0 640 690" width="640" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text {
+      font: 20px arial;
+      fill: white;
+    }
+  </style>
+
+  <text>
+    <tspan x="50" y="600">Мондый реакциядән соң Мәчегә бик моңсу булып калды.</tspan>
+    <tspan x="50" dy="25">Ул, ким дигәндә киләсе яз башына кадәр борынын</tspan>
+    <tspan x="50" dy="25">да чыгармаска дигән карарга килеп, одеял астына</tspan>
+    <tspan x="50" dy="25">кереп качты.</tspan>
+  </text>
+</svg>

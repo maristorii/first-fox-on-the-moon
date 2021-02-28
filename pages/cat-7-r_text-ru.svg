@@ -1,0 +1,17 @@
+<svg height="690" viewBox="0 0 640 690" width="640" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text {
+      font: 20px arial;
+      fill: #2d2d2f;
+    }
+  </style>
+
+  <text>
+    <tspan x="250" y="420">Ура! Сегодня у Кота премьера!</tspan>
+    <tspan x="250" dy="25">Зрители уже досмотрели фильм,</tspan>
+    <tspan x="250" dy="25">и Кот вышел на сцену, чтобы</tspan>
+    <tspan x="250" dy="25">рассказать о своей работе.</tspan>
+    <tspan x="250" dy="25">Давай узнаем, какие выводы</tspan>
+    <tspan x="250" dy="25">он сделал.</tspan>
+  </text>
+</svg>

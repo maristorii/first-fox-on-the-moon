@@ -1,0 +1,19 @@
+<svg height="690" viewBox="0 0 640 690" width="640" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text {
+      font: 20px arial;
+      fill: black;
+    }
+  </style>
+
+  <text>
+    <tspan x="65" y="170">Бал кортлары йорты</tspan>
+    <tspan x="65" dy="25">төзелешенең Техник</tspan>
+    <tspan x="65" dy="25">йөкләмәсе әзер</tspan>
+    <tspan x="65" dy="25">булды ахры: күр әле,</tspan>
+    <tspan x="65" dy="25">Аю барысын да бик</tspan>
+    <tspan x="65" dy="25">җайлы итеп</tspan>
+    <tspan x="65" dy="25">тәртипкә салып</tspan>
+    <tspan x="65" dy="25">куйды!</tspan>
+  </text>
+</svg>

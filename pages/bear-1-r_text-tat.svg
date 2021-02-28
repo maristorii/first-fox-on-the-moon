@@ -1,0 +1,20 @@
+<svg height="690" viewBox="0 0 640 690" width="640" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text {
+      font: 20px arial;
+      fill: black;
+    }
+  </style>
+
+  <text>
+    <tspan x="160" y="490">Аю бал кортларына менә нинди сораулар</tspan>
+    <tspan x="160" dy="25">бирергә булды:</tspan>
+    <tspan x="160" dy="25">Йорт нинди зурлыкта булырга тиеш?</tspan>
+    <tspan x="160" dy="25">Нинди төстә?</tspan>
+    <tspan x="160" dy="25">Анда ничә тәрәзә була?</tspan>
+    <tspan x="160" dy="25">Бәлки башка теләкләрегез дә бардыр?</tspan>
+
+    <tspan x="160" dy="38">Йортта яшәүчеләргә тагын нинди сораулар</tspan>
+    <tspan x="160" dy="25">бирергә мөмкин?</tspan>
+  </text>
+</svg>

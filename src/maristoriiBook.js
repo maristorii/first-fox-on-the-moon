@@ -2,6 +2,7 @@ let pages;
 let book;
 let control;
 let building;
+let movie;
 
 //urlParams
 const getUrlParams = () => {
@@ -83,12 +84,15 @@ const syncDependencies = () => {
       return;
     }
 
-    if (Math.abs(page.video.currentTime - page.dependantVideo.currentTime) < 0.05) {
+    if (page.video.currentTime - page.dependantVideo.currentTime >= 0.05) {
+      page.dependantVideo.currentTime = page.video.currentTime;
       return;
     }
 
-    page.dependantVideo.currentTime = page.video.currentTime;
-    page.video.currentTime = page.dependantVideo.currentTime;
+    if (page.dependantVideo.currentTime - page.video.currentTime >= 0.05) {
+      page.video.currentTime = page.dependantVideo.currentTime;
+      return;
+    }
   });
 };
 
@@ -126,10 +130,19 @@ window.addEventListener('DOMContentLoaded', () => {
   if (urlParams.hideLinks) {
     document.getElementById('body').classList.add('body_hide-links');
   }
-});
 
-window.onload = () => {
+  document.getElementById('body').classList.add('animation');
+
+  setInterval(() => {
+    document.getElementById('body').classList.remove('animation');
+    setTimeout(() => document.getElementById('body').classList.add('animation'), 100);
+  }, 7000);
+
   const bookDomElement = document.getElementById('book');
+
+  let controlPageIndex;
+  let buildingPageIndex;
+  let moviePageIndex;
 
   pages = Array.from(bookDomElement.getElementsByClassName('book__page'))
     .map((page, pageIndex) => {
@@ -143,7 +156,12 @@ window.onload = () => {
         });
       }
 
+      if (page.querySelector('#movie-l')) {
+        moviePageIndex = pageIndex;
+      }
+
       return {
+        page,
         video,
         images: Array.from(page.getElementsByTagName('img')),
         onceOpened: false,
@@ -167,9 +185,6 @@ window.onload = () => {
 
     document.querySelector('.content__hint-video').load();
   }
-
-  let controlPageIndex;
-  let buildingPageIndex;
 
   pages.forEach(({ video, pageIndex }) => {
     if (!video) {
@@ -216,14 +231,20 @@ window.onload = () => {
     pageIndex: controlPageIndex,
   });
 
-  // building = new Building({
-  //   domElem: document.getElementById('building'),
-  //   video: document.getElementById('building-video'),
-  //   leftPage: document.getElementById('building-leftPage'),
-  //   rightPage: document.getElementById('building-rightPage'),
-  //   book,
-  //   pageIndex: buildingPageIndex,
-  // });
+  building = new Building({
+    domElem: document.getElementById('building'),
+    video: document.getElementById('building-video'),
+    leftPage: document.getElementById('building-leftPage'),
+    rightPage: document.getElementById('building-rightPage'),
+    book,
+    pageIndex: buildingPageIndex,
+  });
+
+  movie = new Movie({
+    page: document.getElementById('movie'),
+    book,
+    pageIndex: moviePageIndex,
+  });
 
   setInterval(syncDependencies, 500);
 
@@ -262,4 +283,4 @@ window.onload = () => {
   });
   Array.from(document.getElementsByClassName('content__hint'))
     .forEach(hint => hint.addEventListener('click', e => book.goForward()));
-};
+});
