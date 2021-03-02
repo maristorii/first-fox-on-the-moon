@@ -106,7 +106,7 @@ const onCurrentPageChange = ({ detail: { currentPage, previousPage } }) => {
   }
 
   tryToPlay();
-  [previousPage, previousPage + 1].forEach(pageIndex => {
+  [previousPage - 1, previousPage].forEach(pageIndex => {
     const page = pages[pageIndex];
 
     if (!page || !page.video || page.isDependant || !page.video.readyState === 4) {
