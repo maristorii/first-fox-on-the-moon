@@ -20,11 +20,29 @@ const urlParams = getUrlParams();
 const lang = urlParams.lang || 'ru';
 
 const onPageVisibilityChange = ({ detail: { index, visible } }) => {
+  const { onceOpened, video, images, sources } = pages[index];
+
   if (!visible) {
+    sources.forEach(source => {
+      source.src = '';
+    });
+    video && video.load();
+
+    images.forEach(image => {
+      image.src = '';
+    });
+
     return;
   }
 
-  const { onceOpened, video, images } = pages[index];
+  sources.forEach(source => {
+    source.src = source.dataset.finalSrc;
+  });
+  video && video.load();
+
+  images.forEach(image => {
+    image.src = image.dataset.finalSrc;
+  });
 
   if (onceOpened) {
     return;
@@ -36,8 +54,6 @@ const onPageVisibilityChange = ({ detail: { index, visible } }) => {
     video.removeAttribute('preload');
     video.load();
   }
-
-  images.forEach(image => image.setAttribute('src', image.dataset.src.replace('_text.', `_text-${lang}.`)));
 };
 
 const tryToPlay = () => {
@@ -106,7 +122,7 @@ const onCurrentPageChange = ({ detail: { currentPage, previousPage } }) => {
   }
 
   tryToPlay();
-  [previousPage - 1, previousPage].forEach(pageIndex => {
+  [previousPage, previousPage + 1].forEach(pageIndex => {
     const page = pages[pageIndex];
 
     if (!page || !page.video || page.isDependant || !page.video.readyState === 4) {
@@ -148,22 +164,51 @@ window.addEventListener('DOMContentLoaded', () => {
     .map((page, pageIndex) => {
       const video = page.getElementsByTagName('video')[0];
 
+      let sources = [];
+
       if (video) {
-        Array.from(video.getElementsByTagName('source')).forEach(source => {
+        sources = Array.from(video.getElementsByTagName('source'));
+
+        sources.forEach(source => {
           if (source.dataset.src) {
             source.src = source.dataset.src.replace('_text.', `_text-${lang}.`);
           }
+
+          source.dataset.finalSrc = source.src;
         });
+        video.load();
       }
 
       if (page.querySelector('#movie-l')) {
         moviePageIndex = pageIndex;
       }
 
+      const images = Array.from(page.getElementsByTagName('img'));
+
+      images.forEach(image => {
+        if (image.dataset.src) {
+          image.setAttribute('src', image.dataset.src.replace('_text.', `_text-${lang}.`));
+        }
+
+        image.dataset.finalSrc = image.src;
+      });
+
+      if (pageIndex > 3) {
+        sources.forEach(source => {
+          source.src = '';
+        });
+        video && video.load();
+
+        images.forEach(image => {
+          image.src = '';
+        });
+      }
+
       return {
         page,
         video,
-        images: Array.from(page.getElementsByTagName('img')),
+        sources,
+        images,
         onceOpened: false,
         pageIndex,
         played: false,
