@@ -72,8 +72,8 @@
   --item-aspect-ratio: calc(940 / 780);
   border-radius: 75% 30% 50% 55% / 35% 80% 30% 75%;
   --width: 13%;
-  top: 44%;
-  left: 62%;
+  top: 48%;
+  left: 73.5%;
 
   z-index: 5;
 }
